@@ -14,15 +14,15 @@ The test validates the following:
 
 \- **Status Code**: Response status is \`200\` (Optional).
 
-\- **Name Field**: The \`Name\` field in the response is \`"Carbon credits"\`.
+\- **Name Field**: The \`Name\` field in the response is \`Carbon credits\`.
 
 \- **CanRelist**: The value of \`CanRelist\` is \`true\`.
 
 \- **Promotions Array**:
 
-\- There is a promotion with \`Name = "Gallery"\`.
+\- There is a promotion with \`Name = Gallery\`.
 
-\- That promotion has a \`Description\` which contains the text \*\*"Good position in category"\*\*.
+\- That promotion has a \`Description\` which contains the text \`Good position in category\`.
 
 **🚀 How to Run the Test**
 
