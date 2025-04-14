@@ -8,21 +8,21 @@ We are testing the following API endpoint: [https://api.tmsandbox.co.nz/v1/Categ
 
 The script checks whether the response meets the specified acceptance criteria.
 
-✅ Acceptance Criteria
+**✅ Acceptance Criteria**
 
 The test validates the following:
 
-\- **Status Code**: Response status is \`200\` (Optional).
+\- **Status Code**: Response status is "200" (Optional).
 
-\- **Name Field**: The \`Name\` field in the response is \`Carbon credits\`.
+\- **Name Field**: The \`Name\` field in the response is “Carbon credits”.
 
-\- **CanRelist**: The value of \`CanRelist\` is \`true\`.
+\- **CanRelist**: The value of "CanRelist=true".
 
 \- **Promotions Array**:
 
-\- There is a promotion with \`Name = Gallery\`.
+\- There is a promotion with "Name = Gallery”.
 
-\- That promotion has a \`Description\` which contains the text \`Good position in category\`.
+\- That promotion has a “Description = Good position in category”.
 
 **🚀 How to Run the Test**
 
@@ -32,6 +32,6 @@ Option 1: Use Postman GUI
 
 2\. Import the collection file:
 
-\- \`Assurity Consulting.postman\_collection.json\`
+\- Assurity Consulting.postman\_collection.json
 
 3\. Run the collection manually or using the built-in Collection Runner.
