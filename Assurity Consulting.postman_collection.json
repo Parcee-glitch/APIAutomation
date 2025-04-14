@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "12e33651-e5ce-4705-9396-d414ad7bc902",
+		"name": "Assurity Consulting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44036723"
+	},
+	"item": [
+		{
+			"name": "Test Scripts",
+			"item": [
+				{
+					"name": "Carbon Credits",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Name is 'Carbon credits'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.Name).to.eql(\"Carbon credits\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"CanRelist is true\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.CanRelist).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Gallery promotion has correct description\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var galleryPromo = jsonData.Promotions.find(promo => promo.Name === \"Gallery\");\r",
+									"    pm.expect(galleryPromo).to.not.be.undefined;\r",
+									"    pm.expect(galleryPromo.Description).to.include(\"Good position in category\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false",
+							"protocol": "https",
+							"host": [
+								"api",
+								"tmsandbox",
+								"co",
+								"nz"
+							],
+							"path": [
+								"v1",
+								"Categories",
+								"6327",
+								"Details.json"
+							],
+							"query": [
+								{
+									"key": "catalogue",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Test Automation Script for Assurity Consulting\n\nAPI = [https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false](https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false)\n\nAcceptance Criteria:\n\n- Added check for status code 200 (Optional)\n    \n- Name = \"Carbon credits\"\n    \n- CanRelist = true\n    \n- The Promotions element with Name = \"Gallery\" has a Description that contains the text \"Good position in category\""
+		}
+	]
+}
